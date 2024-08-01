@@ -10,7 +10,7 @@ const DebugGlobaltags = () => {
   const translator = useTranslator();
   const globaltags = atrament.ink.getGlobalTags();
   return(
-    <Collapse title={translator.translate('debug.global-tags')}>
+    <Collapse title={translator.translate('debug.global-tags')} open>
       <Table data={Object.entries(globaltags)} />
     </Collapse>
   );

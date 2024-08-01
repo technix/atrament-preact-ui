@@ -20,7 +20,7 @@ const DebugInfo = () => {
   ];
 
   return(
-    <Collapse title={translator.translate('debug.info')}>
+    <Collapse title={translator.translate('debug.info')} open>
       <Table data={tableData} />
     </Collapse>
   );
