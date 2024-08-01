@@ -25,6 +25,8 @@
       "debug.info.current-turn-index": "Current turn index",
       "debug.global-tags": "Global tags",
       "debug.variables": "Variables",
+      "debug.variables.cancel": "Cancel",
+      "debug.variables.save": "Save",
       "debug.visits": "Visits",
       "debug.go-to-path": "Go to path"
     }
@@ -55,6 +57,8 @@
       "debug.info.current-turn-index": "Індекс поточного ходу",
       "debug.global-tags": "Глобальні теги",
       "debug.variables": "Змінні",
+      "debug.variables.cancel": "Скасувати",
+      "debug.variables.save": "Зберегти",
       "debug.visits": "Візити",
       "debug.go-to-path": "Перейти до"
     }

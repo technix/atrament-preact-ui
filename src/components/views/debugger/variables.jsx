@@ -5,6 +5,8 @@ import { useTranslator } from '@eo-locale/preact';
 import Collapse from 'src/components/ui/collapse';
 import Table from 'src/components/ui/table';
 
+import DebugVariableEditor from './var-editor';
+
 function listInkVariables(atrament) {
   const varState = atrament.ink.story().variablesState;
   const inkVariables = [];
@@ -18,7 +20,9 @@ const DebugVariables = () => {
   const { atrament } = useAtrament();
   const translator = useTranslator();
   const inkVariables = listInkVariables(atrament);
-  const tableData = inkVariables.map((item) => [ item[0], JSON.stringify(item[1])]);
+  const tableData = inkVariables.map(
+    (item, i) => [ item[0], <DebugVariableEditor key={i} name={item[0]} value={item[1]} />]
+  );
   return(
     <Collapse title={translator.translate('debug.variables')}>
       <Table data={tableData} />
