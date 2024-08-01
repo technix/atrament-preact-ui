@@ -2,8 +2,6 @@ import { h } from 'preact';
 import { useEffect, useCallback, useState } from 'preact/hooks';
 import style from './index.module.css';
 
-import Modal from 'src/components/ui/modal';
-import Backdrop from 'src/components/ui/backdrop';
 import CloseButton from 'src/components/ui/close-button';
 
 import DebugInfo from './info';

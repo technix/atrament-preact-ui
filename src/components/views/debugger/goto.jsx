@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import style from './goto.module.css';
+import { Text } from '@eo-locale/preact';
 import { useState } from 'preact/hooks';
 import { useAtrament } from 'src/atrament/hooks';
 
@@ -29,13 +30,13 @@ const DebugGoto = ({closeFn}) => {
     <>
       <div class={style.container}>
         <div>
-        Go to path:
+          <Text id={'debug.go-to-path'} />:
         </div>
         <div class={style.input_div}>
           <input class={style.input} type="text" value={pathString} onInput={handlePathstringChange} />
         </div>
         <div>
-          <button class={style.button} onClick={goToPath}>Go</button> <br />
+          <button class={style.button} onClick={goToPath}>&gt;&gt;&gt;</button> <br />
         </div>
       </div>
       <div class={style.container}>

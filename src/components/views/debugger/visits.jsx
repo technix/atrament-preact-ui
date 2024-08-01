@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import { useAtrament } from 'src/atrament/hooks';
+import { useTranslator } from '@eo-locale/preact';
 
 import Collapse from 'src/components/ui/collapse';
 import Table from 'src/components/ui/table';
@@ -15,9 +16,10 @@ function listInkVisits(atrament) {
 
 const DebugVisits = () => {
   const { atrament } = useAtrament();
+  const translator = useTranslator();
   const inkVisits = listInkVisits(atrament);
   return(
-    <Collapse title="Visits">
+    <Collapse title={translator.translate('debug.visits')}>
       <Table data={inkVisits} />
     </Collapse>
   );

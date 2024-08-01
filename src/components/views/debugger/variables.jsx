@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import { useAtrament } from 'src/atrament/hooks';
+import { useTranslator } from '@eo-locale/preact';
 
 import Collapse from 'src/components/ui/collapse';
 import Table from 'src/components/ui/table';
@@ -15,10 +16,11 @@ function listInkVariables(atrament) {
 
 const DebugVariables = () => {
   const { atrament } = useAtrament();
+  const translator = useTranslator();
   const inkVariables = listInkVariables(atrament);
   const tableData = inkVariables.map((item) => [ item[0], JSON.stringify(item[1])]);
   return(
-    <Collapse title="Variables">
+    <Collapse title={translator.translate('debug.variables')}>
       <Table data={tableData} />
     </Collapse>
   );
