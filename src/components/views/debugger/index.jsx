@@ -43,15 +43,12 @@ const DebuggerView = () => {
 
   return (
     <div class={style.debug_container}>
-      <Backdrop onClick={toggleDebugger} />
-      <Modal>
-        <CloseButton onClick={toggleDebugger} />
-        <DebugInfo />
-        <DebugGlobaltags />
-        <DebugVariables />
-        <DebugVisits />
-        <DebugGoto closeFn={toggleDebugger} />
-      </Modal>
+      <CloseButton onClick={toggleDebugger} />
+      <DebugInfo />
+      <DebugGlobaltags />
+      <DebugVariables />
+      <DebugVisits />
+      <DebugGoto closeFn={toggleDebugger} />
     </div>
   );
 }
