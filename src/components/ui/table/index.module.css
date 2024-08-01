@@ -1,5 +1,6 @@
 .table {
     border-collapse: collapse;
+    color: var(--fg-color);
 }
 
 .table th,
@@ -8,11 +9,7 @@
 }
 
 .table thead tr {
-    color: var(--accent-fg-color);
-}
-
-.table tbody td {
-    color: var(--fg-color);
+    border-bottom: 2px solid var(--shade-color);
 }
 
 .table tbody tr {

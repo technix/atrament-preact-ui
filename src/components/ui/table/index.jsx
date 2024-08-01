@@ -6,7 +6,9 @@ const Table = ({columns = [], data = []}) => {
     <table class={style.table}>
       {columns.length > 0 && 
         <thead>
-          {columns.map((th, i) => (<th key={i}>{th}</th>))}
+          <tr>
+            {columns.map((th, i) => (<th key={i} style={th.style}>{th.name}</th>))}
+          </tr>
         </thead>
       }
       {data.length > 0 && 

@@ -15,7 +15,7 @@
 }
 
 .button_close {
-    background-color: var(--accent-bg-color);
+    background-color: var(--bg-color);
     color: var(--accent-fg-color);
     text-decoration: none;
     font-weight: bold;
@@ -41,4 +41,10 @@
 
 .checkbox {
     width: 2rem;
+}
+
+.toggle {
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }

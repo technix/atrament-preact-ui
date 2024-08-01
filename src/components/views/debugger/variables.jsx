@@ -25,7 +25,12 @@ const DebugVariables = () => {
   );
   return(
     <Collapse title={translator.translate('debug.variables')}>
-      <Table data={tableData} />
+      <Table columns={
+        [
+          { name: translator.translate('debug.variables.name'), style: {width: '25%', 'text-align': 'left'} },
+          { name: translator.translate('debug.variables.value'), style: {'text-align': 'left'} }
+        ]
+      } data={tableData} />
     </Collapse>
   );
 };
