@@ -2,6 +2,7 @@ import { h } from 'preact';
 import { useAtrament } from 'src/atrament/hooks';
 
 import Collapse from 'src/components/ui/collapse';
+import Table from 'src/components/ui/table';
 
 function listInkVariables(atrament) {
   const varState = atrament.ink.story().variablesState;
@@ -15,13 +16,10 @@ function listInkVariables(atrament) {
 const DebugVariables = () => {
   const { atrament } = useAtrament();
   const inkVariables = listInkVariables(atrament);
+  const tableData = inkVariables.map((item) => [ item[0], JSON.stringify(item[1])]);
   return(
     <Collapse title="Variables">
-      <table style={{border: 1}}>
-        <tbody>
-          {inkVariables.map((item, i) => <tr key={i}><td>{item[0]}</td><td>{JSON.stringify(item[1])}</td></tr>)}
-        </tbody>
-      </table>
+      <Table data={tableData} />
     </Collapse>
   );
 };

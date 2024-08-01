@@ -8,6 +8,7 @@ import CloseButton from 'src/components/ui/close-button';
 
 import DebugInfo from './info';
 import DebugGoto from './goto';
+import DebugGlobaltags from './globaltags';
 import DebugVariables from './variables';
 import DebugVisits from './visits';
 
@@ -46,9 +47,10 @@ const DebuggerView = () => {
       <Modal>
         <CloseButton onClick={toggleDebugger} />
         <DebugInfo />
-        <DebugGoto />
+        <DebugGlobaltags />
         <DebugVariables />
         <DebugVisits />
+        <DebugGoto closeFn={toggleDebugger} />
       </Modal>
     </div>
   );
