@@ -8,13 +8,9 @@ import ContainerImage from 'src/components/ui/container-image'
 const Picture = ({ options, children }) => {
   const { getAssetPath } = useAtrament();
   const pictureOptions = {
+    ...options,
     fullsize: true
   };
-  ['leftmargin', 'rightmargin', 'width'].forEach((k) => {
-    if (options[k]) {
-      pictureOptions[k] = options[k];
-    }
-  });
   return (<ContainerImage src={getAssetPath(children)} options={pictureOptions} />);
 }
 
