@@ -6,12 +6,12 @@ import { viteSingleFile } from 'vite-plugin-singlefile';
 import zipPack from "vite-plugin-zip-pack";
 import CleanBuild from 'vite-plugin-clean-build';
 
-import { compileInk, watchInkFiles } from './vite/ink-compiler-plugin';
-import { removeInkFilesFromBuild } from './vite/remove-ink-files-plugin';
-import { conditionalFonts } from './vite/conditional-fonts-plugin';
-import getPWAConfig from './vite/pwa-config';
+import { compileInk, watchInkFiles } from './vite/ink-compiler-plugin.js';
+import { removeInkFilesFromBuild } from './vite/remove-ink-files-plugin.js';
+import { conditionalFonts } from './vite/conditional-fonts-plugin.js';
+import getPWAConfig from './vite/pwa-config.js';
 
-import atramentCfg from './atrament.config.json';
+import atramentCfg from './atrament.config.json' with { type: 'json' };
 
 export default defineConfig(({ mode }) => {
   const isTemplateBuild = process.argv.includes('--template');
