@@ -5,7 +5,7 @@ import style from './index.module.css';
 import { useAtrament, useAtramentState } from 'src/atrament/hooks';
 
 import {
-  DEFAULT_FONT_SIZE, FONT_SIZE_STEP, FONT_SIZE_MIN, FONT_SIZE_MAX, 
+  DEFAULT_FONT_SIZE, FONT_SIZE_STEP, FONT_SIZE_MIN, FONT_SIZE_MAX,
   DEFAULT_LINE_HEIGHT, LINE_HEIGHT_STEP, LINE_HEIGHT_MIN, LINE_HEIGHT_MAX
 } from 'src/constants';
 

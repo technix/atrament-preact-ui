@@ -12,7 +12,7 @@ export function registerSettingsHandlers(atrament) {
       (oldV, value) => setCssProperty('--font-size-game', `${value}%`),
     lineHeight:
       (oldV, value) => setCssProperty('--text-line-height', `${value}%`),
-      animation:
+    animation:
       (oldV, value) => (value ? removeCssProperty('--animation-disabled') : setCssProperty('--animation-disabled', '0s')),
     fullscreen:
       (oldV, value) => {

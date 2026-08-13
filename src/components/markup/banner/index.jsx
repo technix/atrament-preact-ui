@@ -1,7 +1,6 @@
 import { h } from 'preact';
 import clsx from 'clsx';
 import style from './index.module.css';
-import block from '../block';
 
 // [banner style=highlight allcaps=false]text in info block[/banner]
 

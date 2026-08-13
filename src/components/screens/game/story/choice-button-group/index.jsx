@@ -119,8 +119,8 @@ const ChoiceButtonGroup = ({ key, currentScene, setReady }) => {
           />))
         }
         {
-          (choiceAppearance.grid && choiceAppearance.grouped && emptyCells > 0) 
-          && <div style={{"grid-column": `span ${emptyCells}`, "background-color": "var(--bg-color)"}}></div>
+          (choiceAppearance.grid && choiceAppearance.grouped && emptyCells > 0)
+          && <div style={{ "grid-column": `span ${emptyCells}`, "background-color": "var(--bg-color)" }} />
         }
       </div>
     </>
